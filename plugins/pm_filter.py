@@ -143,15 +143,7 @@ async def next_page(bot, query):
                 ]
                 for file in files
             ]
-        if message.from_user.id in LZURL_PRIME_USERS:
-            btn = [
-                [
-                    InlineKeyboardButton(
-                        text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}'
-                    ),
-                ]
-                for file in files
-            ]
+   
     elif settings['button'] and not ENABLE_SHORTLINK:
         btn = [
             [
