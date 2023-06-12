@@ -143,7 +143,7 @@ async def next_page(bot, query):
                 ]
                 for file in files
             ]
-        elif message.from_user.id in LZURL_PRIME_USERS:
+        if message.from_user.id in LZURL_PRIME_USERS:
             btn = [
                 [
                     InlineKeyboardButton(
